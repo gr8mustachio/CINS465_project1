@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add New Task</title>
+    {% load static %}
+    {% include "tasks/bootstrap.html" %}
+    <link rel="stylesheet" href="{% static 'proj1.css' %}">
+  </head>
+  <body>
+    {% include "nav.html" %}
+    <div class="jumbotron">
+      <h1>Add Task</h1>
+      <form method="post">
+        {% csrf_token %}
+        <table>
+          {{ form_data.as_table }}
+          <tr>
+            <td></td>
+            <td>
+              <a href="/main_tasks/" class="btn btn-secondary">Cancel</a>
+              <input type="submit" class="btn btn-primary" name="add" value="Add Task">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

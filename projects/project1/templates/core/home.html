@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  {% load static %}
+  {% include "core/bootstrap.html" %}
+  <script src="{%static 'proj1.js'%}"></script>
+
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+  <link rel="stylesheet" href="{% static 'proj1.css' %}">
+  <meta charset="utf-8">
+  <title>Project 1</title>
+</head>
+<body>
+  {% include "nav.html" %}
+
+
+  <h1>Project 1: Organizer</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="ct-chart ct-perfect-fourth", id="example-pie-chart">
+          <script>
+            new Chartist.Pie('#example-pie-chart',
+            { labels: ['Completed', 'Pending'], series: [{{ complete }}, {{ incomplete }}] },
+            { labelInterpolationFnc: function(value) { return value[0] } },
+            [['screen', { chartPadding: 20, labelOffset: 60, labelDirection: 'explode',
+            labelInterpolationFnc: function(value) { return value;}}]]);
+
+
+          </script>
+
+        </div>
+
+      </div>
+      <div class="col-sm">
+        <div class="ct-chart-br ct-perfect-fourth", id="example-bar-graph">
+          <script>
+            new Chartist.Bar('.ct-chart-br', {
+              //labels: []
+              series: [
+                  {{ projected }},
+                  {{ actual }}
+
+
+              ]
+            }, {
+              seriesBarDistance: 10,
+              axisX: {
+                offset: 60
+              },
+              axisY: {
+                offset: 80,
+                // labelInterpolationFnc: function(value) {
+                //   return value + ' CHF'
+                // },
+                scaleMinSpace: 15
+              }
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

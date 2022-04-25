@@ -1,0 +1,34 @@
+import sys
+inp = []
+out = []
+vowels = ["a", "e", "i", "o", "u"]
+for line in sys.stdin:
+    inp.append(line.strip().lower())
+
+i = 0
+consEndIndex = 0;
+for word in inp:
+    if(word[0] == 'a' or word[0] == 'e'or word[0] == 'i'or word[0] == 'o'or word[0] == 'u'):
+        inp[i] += "-yay"
+        i += 1
+        #inp.append(word.lower())
+    else:
+        consonants = ""
+        for char in word:
+            if char not in vowels:
+                consonants += char
+                inp[i].replace(char, "")
+            else:
+                break
+        #char = word[0]
+        word = word[1:]
+        suffix = "-" + consonants + "ay"
+        word += suffix
+        inp[i] = word
+        i += 1
+        #inp.append(word.lower())
+
+#inp.sort()
+for words in inp:
+    print(words)
+

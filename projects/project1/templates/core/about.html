@@ -1,0 +1,26 @@
+<html lang="en" dir="ltr">
+<head>
+  {% load static %}
+  {% include "core/bootstrap.html" %}
+  <link rel="stylesheet" href="{% static 'chessboard.css' %}">
+  <meta charset="utf-8">
+  </head>
+  <body>
+    {% include "nav.html" %}
+    <hr></hr>
+    <big>About Me</big>
+    <p>My name is Liam Smith. I'm a Computer Science Major, and I'm
+      originally from Santa Cruz. I am a junior,
+      but I know I'll be here for longer than 4 years (thanks COVID). I'm more introverted
+      than extroverted, and my hobbies reflect that. I enjoy reading, playing
+      videogames, and hanging with close friends. I really love bike riding and driving, I feel it's the best way to clear my head and unwind.
+      I have a 6-speed manual Mini Cooper S that I love whipping around. I don't know what field I want to go into
+      for Computer Science, but this class has proved to be my most interesting comp sci class so far, so maybe I'll enjoy web dev. </p>
+
+      <center><img src="{% static 'pics/CINS_465_asg1_pic.jpg' %}" width="500px" height="400px" alt="Me">
+      <img src="{% static 'pics/asg5_friends.jpg' %}" alt="Friends">
+      </center>
+      <hr></hr>
+
+  </body>
+</html>

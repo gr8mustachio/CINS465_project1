@@ -1,0 +1,250 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-
+J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-
+Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+integrity="sha384-
+Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-
+wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+function move()
+{
+  src = document.getElementById("src").value;
+  dst = document.getElementById("dst").value;
+  piece = document.getElementById(src).innerHTML;
+  document.getElementById(dst).innerHTML = piece;
+  document.getElementById(src).innerHTML = "";
+}
+
+function reset()
+{
+  window.location.reload();
+}
+</script>
+    <link rel="stylesheet" href="asg2.css">
+    <meta charset="utf-8">
+    <title>CINS 465 Assignment 2</title>
+  </head>
+  <body>
+    <center>
+    <h1>Assignment 2: Moving Chess Pieces</h1>
+    <table>
+      <caption><big></big></caption>
+      <th scope="col"></th>
+      <th scope="col">A</th>
+      <th scope="col">B</th>
+      <th scope="col">C</th>
+      <th scope="col">D</th>
+      <th scope="col">E</th>
+      <th scope="col">F</th>
+      <th scope="col">G</th>
+      <th scope="col">H</th>
+      <tr>
+        <th scope="row">8</th>
+        <td id="a8">&#9814;</td>
+        <td id="b8">&#9816;</td>
+        <td id="c8">&#9815;</td>
+        <td id="d8">&#9813;</td>
+        <td id="e8">&#9812;</td>
+        <td id="f8">&#9815;</td>
+        <td id="g8">&#9816;</td>
+        <td id="h8">&#9814;</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td id="a7">&#9817;</td>
+        <td id="b7">&#9817;</td>
+        <td id="c7">&#9817;</td>
+        <td id="d7">&#9817;</td>
+        <td id="e7">&#9817;</td>
+        <td id="f7">&#9817;</td>
+        <td id="g7">&#9817;</td>
+        <td id="h7">&#9817;</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td id="a6">&nbsp;</td>
+        <td id="b6">&nbsp;</td>
+        <td id="c6">&nbsp;</td>
+        <td id="d6">&nbsp;</td>
+        <td id="e6">&nbsp;</td>
+        <td id="f6">&nbsp;</td>
+        <td id="g6">&nbsp;</td>
+        <td id="h6">&nbsp;</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td id="a5">&nbsp;</td>
+        <td id="b5">&nbsp;</td>
+        <td id="c5">&nbsp;</td>
+        <td id="d5">&nbsp;</td>
+        <td id="f5">&nbsp;</td>
+        <td id="e5">&nbsp;</td>
+        <td id="g5">&nbsp;</td>
+        <td id="h5">&nbsp;</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td id="a4">&nbsp;</td>
+        <td id="b4">&nbsp;</td>
+        <td id="c4">&nbsp;</td>
+        <td id="d4">&nbsp;</td>
+        <td id="e4">&nbsp;</td>
+        <td id="f4">&nbsp;</td>
+        <td id="g4">&nbsp;</td>
+        <td id="h4">&nbsp;</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td id="a3">&nbsp;</td>
+        <td id="b3">&nbsp;</td>
+        <td id="c3">&nbsp;</td>
+        <td id="d3">&nbsp;</td>
+        <td id="e3">&nbsp;</td>
+        <td id="f3">&nbsp;</td>
+        <td id="g3">&nbsp;</td>
+        <td id="h3">&nbsp;</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td id="a2">&#9823;</td>
+        <td id="b2">&#9823;</td>
+        <td id="c2">&#9823;</td>
+        <td id="d2">&#9823;</td>
+        <td id="e2">&#9823;</td>
+        <td id="f2">&#9823;</td>
+        <td id="g2">&#9823;</td>
+        <td id="h2">&#9823;</td>
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td id="a1">&#9820;</td>
+        <td id="b1">&#9822;</td>
+        <td id="c1">&#9821;</td>
+        <td id="d1">&#9819;</td>
+        <td id="e1">&#9818;</td>
+        <td id="f1">&#9821;</td>
+        <td id="g1">&#9822;</td>
+        <td id="h1">&#9820;</td>
+      </tr>
+    </table>
+
+    <div class = "input-group mb-3">
+      <div class = "input-group-prepend">
+        <span class = "input group text">Move Piece</span>
+        </div>
+        <input type="text" class="form-control" placeholder="e.g e4" id="src">
+      </div>
+
+      <div class = "input-group mb-3">
+        <div class = "input-group-prepend">
+          <span class = "input group text">New Position</span>
+          </div>
+          <input type="text" class="form-control" placeholder="e.g c7" id="dst">
+        </div>
+
+        <button type="button" class="btn btn-success" onclick="move()">Move</button>
+        <button type="button" class="btn btn-info" onclick="reset()">Reset</button>
+  </center>
+    <hr></hr>
+    <p>The History of Chess can be followed all the way back to around
+      1500 years ago. While the origins themselves might be contested,
+    we know for a fact that it originated in South Asia, more
+    specifically India. It spread to the Middle East, then Russia
+    and finally western europe by the 9th century. Chess as we know
+    it today came to be around 1500 CE. There are six different types
+    of chess pieces, and each side begins with 16 pieces The
+    goal is to capture the other player's king, and both
+    sides can capture as many pieces as the other side possess. Chess meta
+    has evolved extensively as the years have gone on, with the current
+    popular strategy being slow paced, claculated games where both players
+    are (hopefully) thinking several steps ahead of the current move. Let's
+    dive into the different types of chess pieces present on a modern day
+    checkerboard.</p>
+    <hr></hr>
+    <big>Meet the Chess Pieces!</big>
+    <ul>
+      <li>Pawn
+        <ul>
+          <li>The most numerous piece on the board. Each player gets 8
+            pawns. On their first move, they have the choice of either moving
+            one or two spaces foreward. After this, they cannot move two spaces.
+            They can either move forward one, or it can capture a piece that is
+            diagonally foreward by 1 square to its position. It
+            is the only piece that cannot move backwards.
+          </li>
+      </li>
+        </ul>
+      <li>Knight
+        <ul>
+          <li>Each player gets two Knights on their side. The knight is a
+            unique piece in the sense that it acually has two different forms
+            of traversal on the board. It can either move up 2 places
+            and over 1, or up 1 place and over 2. The color it lands on
+            must be different than the one it was originally from.
+          </li>
+        </li>
+      </ul>
+      <li>Rook
+        <ul>
+          <li>Each player gets two Rooks on their side. The rook can
+            move in 4 separate directions, up, down, left, and right,
+            and can do so until it either runs into another friendly
+            piece or captures an enemy piece.
+          </li>
+        </li>
+      </ul>
+      <li>Bishop
+        <ul>
+          <li>Each player gets two Bishops on their side. The bishop can
+            move in 4 separate directions diagonally, up->left,
+            down->right, up->left, and up->right,
+            and can do so until it either runs into another friendly
+            piece or captures an enemy piece.
+          </li>
+      </li>
+    </ul>
+    <li>Queen
+      <ul>
+        <li>Each player gets one Queen. It must be used carefully,
+          as it is the most overpowered chess piece, combining the
+          movements of the Rook and the Bishop makes it a formidible
+          piece to be up against, and a big loss to whoever loses their Queen.
+        </li>
+      </li>
+    </ul>
+    <li>The King
+      <ul>
+        <li>Each player gets one King. It must be guarded carefully,
+          and positioned even more carefully, as it is the most valuble chess piece.
+          It can move one tile in any direction. If a player moves a piece so that it puts the king at risk of
+          being captured the next turn, the other player must "check"
+          so that their king is no longer in danger.
+          If that isnt possible, then the game is at a "checkmate"
+          and the player whose king is in danger loses.
+        </li>
+      </li>
+    </ul>
+  </ul>
+    </ul>
+    <hr></hr>
+    <big>About Me</big>
+    <p>My name is Liam Smith. I'm a Computer Science Major, and I'm
+      origionally from Santa Cruz. I am a junior,
+      but I know I'll be here for longer than 4 years. I'm more introverted
+      than extroverted, and my hobbies reflect that. I enjoy reading, playing
+      videogames, hanging with close friends, going for walks and hikes,
+      and I really love driving. I have a 6-speed manual Mini Cooper S who
+      is my baby. I don't know what field I want to go into
+      for Computer Science, but probably not data analysis. </p>
+
+      <center><img src="CINS_465_asg1_pic.jpg" alt="Me"></center>
+      <hr></hr>
+
+  </body>
+</html>

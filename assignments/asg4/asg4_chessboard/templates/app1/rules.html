@@ -1,0 +1,78 @@
+<html lang="en" dir="ltr">
+<head>
+  {% load static %}
+  {% include "app1/bootstrap.html" %}
+  <link rel="stylesheet" href="{% static 'chessboard.css' %}">
+  <meta charset="utf-8">
+  </head>
+  <body>
+    {% include "app1/nav.html" %}
+    <center>
+    <h1>Rules of Chess: The Pieces</h1>
+    <big>Meet the Chess Pieces!</big>
+    <ul>
+      <li>Pawn
+        <ul>
+          <li>The most numerous piece on the board. Each player gets 8
+            pawns. On their first move, they have the choice of either moving
+            one or two spaces foreward. After this, they cannot move two spaces.
+            They can either move forward one, or it can capture a piece that is
+            diagonally foreward by 1 square to its position. It
+            is the only piece that cannot move backwards.
+          </li>
+      </li>
+        </ul>
+      <li>Knight
+        <ul>
+          <li>Each player gets two Knights on their side. The knight is a
+            unique piece in the sense that it acually has two different forms
+            of traversal on the board. It can either move up 2 places
+            and over 1, or up 1 place and over 2. The color it lands on
+            must be different than the one it was originally from.
+          </li>
+        </li>
+      </ul>
+      <li>Rook
+        <ul>
+          <li>Each player gets two Rooks on their side. The rook can
+            move in 4 separate directions, up, down, left, and right,
+            and can do so until it either runs into another friendly
+            piece or captures an enemy piece.
+          </li>
+        </li>
+      </ul>
+      <li>Bishop
+        <ul>
+          <li>Each player gets two Bishops on their side. The bishop can
+            move in 4 separate directions diagonally, up->left,
+            down->right, up->left, and up->right,
+            and can do so until it either runs into another friendly
+            piece or captures an enemy piece.
+          </li>
+      </li>
+    </ul>
+    <li>Queen
+      <ul>
+        <li>Each player gets one Queen. It must be used carefully,
+          as it is the most overpowered chess piece, combining the
+          movements of the Rook and the Bishop makes it a formidible
+          piece to be up against, and a big loss to whoever loses their Queen.
+        </li>
+      </li>
+    </ul>
+    <li>The King
+      <ul>
+        <li>Each player gets one King. It must be guarded carefully,
+          and positioned even more carefully, as it is the most valuble chess piece.
+          It can move one tile in any direction. If a player moves a piece so that it puts the king at risk of
+          being captured the next turn, the other player must "check"
+          so that their king is no longer in danger.
+          If that isnt possible, then the game is at a "checkmate"
+          and the player whose king is in danger loses.
+        </li>
+      </li>
+    </ul>
+  </ul>
+    </ul>
+    </body>
+    </html>

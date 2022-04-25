@@ -1,0 +1,71 @@
+title {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+a {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+table {
+    border: 1px solid black;
+    margin: auto;
+}
+
+.button {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+h1 {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+th {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    /*border-collapse: collapse;*/
+}
+
+td {
+    width: 100px;
+    height: 100px;
+}
+
+caption {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    /* background: black; */
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    font-size: 60px;
+}
+
+body {
+    padding: 40px;
+}
+
+p {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+big {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+ul {
+    font-family: "Lucida Console", "Courier New", monospace;
+}

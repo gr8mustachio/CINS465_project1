@@ -1,4 +1,4 @@
-"""final_project URL Configuration
+"""project1 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,16 +16,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views as core_views
-from food import views as food_views
-from workouts import views as workout_views
+from tasks import views as task_views
+from budget import views as budget_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.main),
     path('about/', core_views.about),
-    path('food/', food_views.main),
-    path('workouts/', workout_views.main),
-    path('login/', core_views.login),
-    path('logout/', core_views.logout),
-    path('join/', core_views.join)
+    path('login/', core_views.user_login),
+    path('logout/', core_views.user_logout),
+    path('join/', core_views.join),
+    path('main_tasks/', task_views.main),
+    path('tasks/add/', task_views.add),
+    #path('main_tasks/tasks/edit/<int:id>/', task_views.edit),
+    path('tasks/edit/<int:id>/', task_views.edit),
+    path('main_budget/', budget_views.main),
+    path('budget/add/', budget_views.add),
+    path('main_budget/budget/edit/<int:id>/', budget_views.edit)
+
+
 ]

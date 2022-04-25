@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %} {% include "bootstrap.html" %}
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'final.css' %}">
+    <meta charset="UTF-8">
+    <title>Health Tracker</title>
+</head>
+
+<body>
+    {% include "nav.html" %}
+    <h1>Final Project: Health Tracker</h1>
+    <p>tHome page</p>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="ct-chart ct-perfect-fourth", id="example-pie-chart">
+              <script>
+                new Chartist.Pie('#example-pie-chart',
+                { labels: ['Completed', 'Pending'], series: [30,60] },
+                { labelInterpolationFnc: function(value) { return value[0] } },
+                [['screen', { chartPadding: 20, labelOffset: 60, labelDirection: 'explode',
+                labelInterpolationFnc: function(value) { return value;}}]]);
+    
+    
+              </script>
+    
+            </div>
+    
+          </div>
+          <div class="col-sm">
+            <div class="ct-chart-br ct-perfect-fourth", id="example-bar-graph">
+              <script>
+                new Chartist.Bar('.ct-chart-br', {
+                  //labels: []
+                  series: [
+                      30, 80
+                      60, 120
+                  ]
+                }, {
+                  seriesBarDistance: 10,
+                  axisX: {
+                    offset: 60
+                  },
+                  axisY: {
+                    offset: 80,
+                    // labelInterpolationFnc: function(value) {
+                    //   return value + ' CHF'
+                    // },
+                    scaleMinSpace: 15
+                  }
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+</body>
+
+</html>
